@@ -1,0 +1,107 @@
+{% load static %}
+
+
+
+  <div class="container-fluid">
+
+    <ul class="nav nav-tabs" id="product">
+      <li class="nav-item">
+        <a class="nav-link active" href="#description">Описание</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#characteristics">Характеристики</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#opinion">Отзывы</a>
+      </li>
+      <!-- Вкладка с выпадающим списком -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+          aria-expanded="false">Дополнительно</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#reviews">Обзоры</a>
+          <a class="dropdown-item" href="#question-answer">Вопрос-Ответ</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#comments">Комментарии</a>
+        </div>
+      </li>
+      <!-- Вкладка в состоянии disabled -->
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#istructions-and-files" tabindex="-1" aria-disabled="true">Инструкции и
+          файлы</a>
+      </li>
+    </ul>
+    <div class="tab-content p-3">
+      <div class="tab-pane fade show active" id="description">
+        <h2 class="h4 mb-3">Описание товара</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, in et nulla impedit, mollitia eos quae
+          inventore, minus molestiae est consequuntur nobis similique repudiandae reprehenderit fugit cumque voluptatum
+          laudantium tempore.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi consequatur deleniti animi, voluptates expedita
+          incidunt dignissimos fugiat repellendus dolorem ut corrupti sit libero nemo est iusto saepe, facilis rerum
+          quam.</p>
+      </div>
+      <div class="tab-pane fade" id="characteristics">
+        <h2 class="h4 mb-3">Характеристики товара</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae soluta qui labore quas repudiandae illum
+          dolore eum incidunt, quam aut perferendis autem iusto repellat ut nesciunt ullam dignissimos recusandae quo.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque atque incidunt modi quam laboriosam velit sit
+          corporis veritatis optio voluptatum, officia quis quas debitis, commodi nisi, reprehenderit ratione nesciunt
+          asperiores.</p>
+      </div>
+      <div class="tab-pane fade" id="opinion">
+        <h2 class="h4 mb-3">Отзывы</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt accusantium sapiente animi suscipit magnam ex
+          quasi nihil quas voluptas! Eius minus incidunt iure deserunt dolor praesentium. Ullam aperiam optio omnis!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, cupiditate! Aspernatur accusamus dolores
+          tenetur iure rerum ut quibusdam nisi aliquam facilis impedit. Sed amet nemo, veniam in placeat eveniet illo!
+        </p>
+      </div>
+      <div class="tab-pane fade" id="reviews">
+        <h2 class="h4 mb-3">Обзоры</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt accusantium sapiente animi suscipit magnam ex
+          quasi nihil quas voluptas! Eius minus incidunt iure deserunt dolor praesentium. Ullam aperiam optio omnis!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, cupiditate! Aspernatur accusamus dolores
+          tenetur iure rerum ut quibusdam nisi aliquam facilis impedit. Sed amet nemo, veniam in placeat eveniet illo!
+        </p>
+      </div>
+      <div class="tab-pane fade" id="question-answer">
+        <h2 class="h4 mb-3">Вопрос-Ответ</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt accusantium sapiente animi suscipit magnam ex
+          quasi nihil quas voluptas! Eius minus incidunt iure deserunt dolor praesentium. Ullam aperiam optio omnis!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, cupiditate! Aspernatur accusamus dolores
+          tenetur iure rerum ut quibusdam nisi aliquam facilis impedit. Sed amet nemo, veniam in placeat eveniet illo!
+        </p>
+      </div>
+      <div class="tab-pane fade" id="comments">
+        <h2 class="h4 mb-3">Комментарии</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt accusantium sapiente animi suscipit magnam ex
+          quasi nihil quas voluptas! Eius minus incidunt iure deserunt dolor praesentium. Ullam aperiam optio omnis!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, cupiditate! Aspernatur accusamus dolores
+          tenetur iure rerum ut quibusdam nisi aliquam facilis impedit. Sed amet nemo, veniam in placeat eveniet illo!
+        </p>
+      </div>
+      <div class="tab-pane fade" id="istructions-and-files">
+        <h2 class="h4 mb-3">Инструкции и
+          файлы</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt accusantium sapiente animi suscipit magnam ex
+          quasi nihil quas voluptas! Eius minus incidunt iure deserunt dolor praesentium. Ullam aperiam optio omnis!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, cupiditate! Aspernatur accusamus dolores
+          tenetur iure rerum ut quibusdam nisi aliquam facilis impedit. Sed amet nemo, veniam in placeat eveniet illo!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="/examples/libs/jquery/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src={% static "bootstrap/js/bootstrap.bundle.min.js" %}></script>
+  <script>
+    // #product a – селектор, выбирающий элементы a, представляющие собой вкладки (при клике на которые нужно отображать соответствующий блок)
+    $('#product a').click(function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+    });
+  </script>

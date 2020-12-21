@@ -1,0 +1,148 @@
+<div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab"  aria-current="true" href="#tb1">ПО</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab"  href="#tb2">Сети</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab"  href="#tb3">Серверы</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  data-toggle="tab"   href="#">Другое</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-toggle="dropdown" href="#about" role="button" aria-expanded="false">Другое2</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" >Cisco</a></li>
+      <li><a class="dropdown-item" href="#">Juniper</a></li>
+      <li><a class="dropdown-item" href="#">Huawei</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Другое</a></li>
+    </ul>
+  </li>
+
+    </ul>
+
+
+
+
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Создание задачи/Вопроса</h5>
+    <p id='tb3' class="card-text">Сформулируйте вопрос максимально подробно и понятно</p>
+
+  </div>
+
+
+
+
+
+
+        <!-- Tab Panels -->
+        <div class="tab-content">
+            <div id="tb1" class="container tab-pane active"><br>
+
+            {% block tab1 %}
+                    <form action="" method="post" align="left" >
+                        {% csrf_token %}
+                        {{ form.as_p }}
+
+
+
+
+ {%comment%}
+
+ {{ form.non_field.errors }}
+  <div class="form-group">
+    <label for="{{ form.description_short.id_for_label }}">Краткое описание задачи</label>
+    {{ form.description_short }}
+      <div class="invalid-feedback">
+      {{ form.description_short.errors }}
+      </div>
+  </div>
+
+  <div class="form-group">
+    <label for="{{ form.description_full.id_for_label }}">Полное описание задачи</label>
+    {{ form.description_full }}
+      <div class="invalid-feedback">
+      {{ form.description_full.errors }}
+      </div>
+  </div>
+
+  <div class="form-group">
+    <label for="{{ form.files.id_for_label }}">Файл</label>
+    {{ form.files }}
+      <div class="invalid-feedback">
+      {{ form.files.errors }}
+      </div>
+  </div>
+
+  <div class="form-group">
+    <label for="{{ form.photo.id_for_label }}">Фото</label>
+    {{ form.photo }}
+      <div class="invalid-feedback">
+      {{ form.photo.errors }}
+      </div>
+  </div>
+
+  <div class="form-group">
+    <label for="{{ form.resolved.id_for_label }}">Решена</label>
+    {{ form.resolved }}
+      <div class="invalid-feedback">
+      {{ form.resolved.errors }}
+      </div>
+  </div>
+
+  <div class="form-group">
+    <label for="{{ form.id_category.id_for_label }}">Категория</label>
+    {{ form.id_category }}
+      <div class="invalid-feedback">
+      {{ form.id_category.errors }}
+      </div>
+  </div>
+
+ {%endcomment%}
+
+ {% comment %}
+{% for field in form %}
+<div class="form-group">
+    {{ field.label_tag }}
+    {{ field }}
+    <div class="Invalid-feedback">
+    {{ field.errors }}
+    </div>
+</div>
+
+{% endfor %}
+ {%endcomment%}
+
+                        <button type="submit" class="btn btn-primary btn-block">Добавить</button>
+                   </form>
+             {% endblock tab1 %}
+            </div>
+            <div id="tb2" class="container tab-pane fade"><br>
+                <legend class="border-bottom mb-4">Tab 2 Body</legend>
+                {% block tab2 %} {% endblock tab2 %}
+            </div>
+
+            <div id="tb3" class="container tab-pane fade"><br>
+                <legend class="border-bottom mb-4">Tab 3 Body</legend>
+                {% block tab3 %} {% endblock tab3 %}
+            </div>
+
+    <a href="#" class="btn btn-primary">Отправить задачу в работу</a>
+        </div>
+
+
+
+
+
+</div>
